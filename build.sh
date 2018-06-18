@@ -15,6 +15,9 @@ cur_dir=`pwd`
 cd $cur_dir/network
 make
 
+cd $cur_dir/utils
+make
+
 cd $cur_dir/depends/hiredis
 make
 sudo make install
