@@ -17,7 +17,7 @@ make
 
 cd $cur_dir/depends/hiredis
 make
-make install
+sudo make install
 
 cd  $cur_dir/matchengine
 sed -i "$c" makefile
