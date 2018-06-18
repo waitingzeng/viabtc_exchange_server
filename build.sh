@@ -11,6 +11,14 @@ libs=${libs//\//\\\/}
 c="s/INCS =/INCS =${cflags}/g"
 l="s/LIBS =/LIBS =${libs}/g"
 cur_dir=`pwd`
+
+cd $cur_dir/network
+make
+
+cd $cur_dir/depends/hiredis
+make
+make install
+
 cd  $cur_dir/matchengine
 sed -i "$c" makefile
 sed -i "$l" makefile
